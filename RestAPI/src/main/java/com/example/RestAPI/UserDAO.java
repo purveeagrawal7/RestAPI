@@ -44,6 +44,18 @@ public class UserDAO {
 		
 	}
 	
+	public UserAccount update(UserAccount updatedUser) {
+	for(UserAccount user:users) {
+		if(user.getId() == updatedUser.getId()) {
+			user.setName(updatedUser.getName());
+			user.setDob(updatedUser.getDob());
+			return updatedUser;
+		}
+	}
+	return null;
+
+	}
+	
 	public UserAccount deleteById(Integer id) {
 		//Because we can't remove from middle of a request, so we have to 
 		// create a new List, store the new list(after removal) there, and
