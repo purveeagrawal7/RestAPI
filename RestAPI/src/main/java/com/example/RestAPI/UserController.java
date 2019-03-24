@@ -36,6 +36,14 @@ public class UserController {
 		return user;
 	}
 	
+	@PutMapping("/users")
+	public void updateUser(@RequestBody UserAccount user) {
+		UserAccount updatedUser = userDAO.update(user);
+		if(user == null) {
+			throw new UserNotFoundException("id: "+ user.getId());
+		}
+	}
+	
 	@DeleteMapping("/users/{id}")
 	public void deleteUser(@PathVariable int id) {
 		UserAccount user = userDAO.deleteById(id);
