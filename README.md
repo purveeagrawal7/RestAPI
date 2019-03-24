@@ -12,5 +12,6 @@ This API can be tested in the POSMAN application.
 Provide the urls:
   http://localhost:8080/users with method as GET in POSTMAN to get the desired response. This will give all the users.
   http://localhost:8080/users/1 This will give a specific user as a response whose id is 1.
-  http://localhost:8080/users with the method as POST to add any user, porvide the new user as a json in the request body.
+  http://localhost:8080/users with the method as POST to add any user, provide the new user as a json object in the request body.
   http://localhost:8080/users/1  with the method as DELETE to delete the user with id 1.
+  http://localhost:8080/users with the method as PUT to update any user, provide the updated user as a json object in the request body.
